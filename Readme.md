@@ -1,9 +1,10 @@
 # Helpers for [FlowRouter](https://github.com/kadirahq/flow-router/)
 
+This is a fork of meteor-flow-router-helpers, with features removed and bugs added.
+
 Template helpers for kadira:flow-router
 
 - subsReady
-- isSubReady (deprecated)
 - pathFor
 - urlFor
 - param
@@ -15,7 +16,7 @@ Content blocks
 
 - linkTo
 
-See [zimme:active-route](https://github.com/zimme/meteor-active-route) for using the following helpers
+See [greenmoose:active-route-basic](https://github.com/greenermoose/meteor-active-route-basic) for using the following helpers
 
 - isActiveRoute
 - isActivePath
@@ -29,14 +30,14 @@ On the server it exports FlowRouterHelpers, with:
 
 ### Install
 ```sh
-meteor add arillo:flow-router-helpers
+meteor add greenmoose:flow-router-helpers
 ```
 
 ### Demo
-[https://flowrouterhelpers.meteor.com](https://flowrouterhelpers.meteor.com)
+None.
 
 ### Examples
-[https://github.com/arillo/meteor-flow-router-helpers-example](https://github.com/arillo/meteor-flow-router-helpers-example)
+None
 
 ### Usage subsReady
 
@@ -62,21 +63,6 @@ FlowRouter.route('/posts', {
   </ul>
   <ul>
   {{#each posts}}
-    <li>{{title}}</li>
-  {{/each}}
-  </ul>
-{{/if}}
-```
-
-
-### Usage isSubReady (deprecated)
-
-Checks whether your subscription is ready. If you don't pass a subscription name it will check for all subscriptions.
-
-```handlebars
-{{#if isSubReady 'items'}}
-  <ul>
-  {{#each items}}
     <li>{{title}}</li>
   {{/each}}
   </ul>
@@ -166,6 +152,7 @@ FlowRouter.route("name", {
 ```
 
 ## Changelog:
+    0.5.3 - Bring into greenmoose package space
     0.5.2 - Add currentRouteOption
     0.5.0 - Add linkTo custom content block. Allow use of pathFor & urlFor on the server
     0.4.6 - Add hashbang option to pathFor
